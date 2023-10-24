@@ -107,7 +107,7 @@ const HomePage = ({ someid }) => {
         <>
             <Translations />
             <div className={navBar ? "nav homenav" : "nav"}>
-                <img src="http://localhost:3000/static/media/logo4.8149fd528f69d70f4c35.png" className="logoSign" />
+                <img src="http://esprit.reclamation.tn:3000/static/media/logo4.8149fd528f69d70f4c35.png" className="logoSign" />
                 <div>
 
                     {/* ************Nav********** */}

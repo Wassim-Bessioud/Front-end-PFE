@@ -3,39 +3,39 @@ import axios from "axios"
 class ConversationService {
 
     createConversations = (studentId,employeeId) => {
-        return axios.post("http://localhost:8080/conversation/new/"+studentId+"/"+employeeId);
+        return axios.post("http://esprit.reclamation.tn:8085/conversation/new/"+studentId+"/"+employeeId);
     }
 
     getAllConversations = () => {
-        return axios.get("http://localhost:8080/conversations");
+        return axios.get("http://esprit.reclamation.tn:8085/conversations");
     }
 
     getStudentsConversation = (studentId) => {
-        return axios.get("http://localhost:8080/conversations/student/"+ studentId);
+        return axios.get("http://esprit.reclamation.tn:8085/conversations/student/"+ studentId);
     } 
     getEmployeesConversation = (employeeId) => {
-        return axios.get("http://localhost:8080/conversations/employee/"+ employeeId);
+        return axios.get("http://esprit.reclamation.tn:8085/conversations/employee/"+ employeeId);
     } 
     getConversationById = (convId) => {
-        return axios.get("http://localhost:8080/conversations/"+ convId);
+        return axios.get("http://esprit.reclamation.tn:8085/conversations/"+ convId);
     } 
     getEmployeeInfo =(convId) => {
-        return axios.get("http://localhost:8080/conv/infos2/"+ convId)
+        return axios.get("http://esprit.reclamation.tn:8085/conv/infos2/"+ convId)
     }
 
     getStudentInfo =(convId) => {
-        return axios.get("http://localhost:8080/conv/infos/"+ convId)
+        return axios.get("http://esprit.reclamation.tn:8085/conv/infos/"+ convId)
     }
 
     getMessagesByConvId = (convId)=> {
-        return axios.get("http://localhost:8080/messages/"+ convId);
+        return axios.get("http://esprit.reclamation.tn:8085/messages/"+ convId);
     }
 
     sendMessage = (message,convId) => {
-        return axios.post("http://localhost:8080/messages/new/"+ convId,message)
+        return axios.post("http://esprit.reclamation.tn:8085/messages/new/"+ convId,message)
     }
     deleteConversationById = (convId) => {
-        return axios.delete("http://localhost:8080/conversation/"+convId)
+        return axios.delete("http://esprit.reclamation.tn:8085/conversation/"+convId)
     }
 
 }
